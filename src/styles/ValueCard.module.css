@@ -1,0 +1,25 @@
+.value-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    text-align: center;
+    width: 250px;
+    margin: 10px;
+  }
+  
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .value-card h3 {
+    font-size: 1.3rem;
+    color: #333;
+  }
+  
+  .value-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  

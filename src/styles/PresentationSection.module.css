@@ -1,0 +1,20 @@
+/* src/styles/PresentationSection.module.css */
+.presentationSection {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .title {
+    font-family: 'A2 Brown', sans-serif;
+    color: #235B4E;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .description {
+    font-family: 'DIN Pro', sans-serif;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }

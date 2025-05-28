@@ -1,0 +1,88 @@
+/* src/styles/DrinkPackages.module.css */
+
+.packagesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .packageCard {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 2px solid #e2e8f0;
+  }
+  
+  .packageCard:hover {
+    transform: translateY(-5px);
+    border-color: #00B189;
+    box-shadow: 0 12px 24px rgba(0, 177, 137, 0.2); 
+  }
+  
+  .packageTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #235B4E;
+    margin-bottom: 0.5rem;
+  }
+  
+  .packageDescription {
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .packageIncludes {
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+  }
+  
+  .packageIncludes li {
+    margin-bottom: 0.5rem;
+    color: #333;
+    position: relative;
+  }
+  
+  .packageIncludes li::before {
+    content: "✓";
+    color: #00B189;
+    position: absolute;
+    left: -1.25rem;
+  }
+  
+  .packageFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    flex-direction: column;
+  }
+  
+  .packagePrice {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #235B4E;
+  }
+  
+  .packageDiscount {
+    font-size: 0.85rem;
+    color: #777;
+    margin-left: 0.5rem;
+  }
+  
+  .selectButton {
+    background-color: #E0592A;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .selectButton:hover {
+    background-color: #c04a22;
+  }

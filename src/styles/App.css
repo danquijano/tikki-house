@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Asegura que el body ocupe toda la altura de la pantalla */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Contenedor principal (flexible) */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenido principal (crece para empujar el footer abajo) */
+.main-content {
+  flex: 1;
+}
+
+/* Footer (siempre abajo) */
+.footer {
+  flex-shrink: 0;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  --primary: #00B189;
+  --primary-dark: #235B4E;
+  --secondary: #F5A800;
+  --accent: #E0592A;
+  --text-dark: #333;
+  --text-light: #555;
+}

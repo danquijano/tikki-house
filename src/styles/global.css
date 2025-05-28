@@ -1,0 +1,84 @@
+/* src/styles/main.css */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.hero-section {
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section .btn {
+  margin-top: 20px;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+/* Asegura que el body ocupe toda la altura de la pantalla */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* Contenedor principal (flexible) */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Contenido principal (crece para empujar el footer abajo) */
+.main-content {
+  flex: 1;
+}
+
+/* Footer (siempre abajo) */
+.footer {
+  flex-shrink: 0;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('../fonts/DINPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.1rem;
+}
+
+@font-face {
+  font-family: 'A2 Brown';
+  src: url('../fonts/A2Brown-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  line-height: 100%;
+}
+
+:root {
+  --primary: #00B189;
+  --primary-dark: #235B4E;
+  --secondary: #F5A800;
+  --accent: #E0592A;
+  --text-dark: #333;
+  --text-light: #555;
+}
+
+
+
+
+
