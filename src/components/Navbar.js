@@ -11,40 +11,42 @@ const NavigationBar = () => {
     <Navbar expand="lg" variant="dark" sticky="top" className={styles.navbar}>
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img 
-            src={logo} 
-            alt="Tikki House Logo" 
+          <img
+            src={logo}
+            alt="Tikki House Logo"
             className={styles.logoImage}
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link 
-              as={Link} 
-              to="/" 
+            <Nav.Link
+              as={Link}
+              to="/"
               className={`${styles.navLink} ${location.pathname === '/' ? styles.active : ''}`}
             >
               Inicio
             </Nav.Link>
-            <Nav.Link 
-              as={Link} 
-              to="/nosotros" 
-              className={`${styles.navLink} ${location.pathname === '/nosotros' ? styles.active : ''}`}
-            >
-              Sobre el servicio
-            </Nav.Link>
-            <Nav.Link 
-              as={Link} 
-              to="/quotes" 
+
+            <Nav.Link
+              as={Link}
+              to="/quotes"
               className={`${styles.navLink} ${location.pathname === '/quotes' ? styles.active : ''}`}
             >
               Cotizaciones
             </Nav.Link>
 
-             <Nav.Link 
-              as={Link} 
-              to="/Login" 
+            <Nav.Link
+              as={Link}
+              to="/nosotros"
+              className={`${styles.navLink} ${location.pathname === '/nosotros' ? styles.active : ''}`}
+            >
+              Sobre el servicio
+            </Nav.Link>
+
+            <Nav.Link
+              as={Link}
+              to="/Login"
               className={`${styles.navLink} ${location.pathname === '/Login' ? styles.active : ''}`}
             >
               Iniciar Sesion

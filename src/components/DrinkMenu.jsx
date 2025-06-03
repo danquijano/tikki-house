@@ -4,7 +4,7 @@ import styles from "../styles/DrinkMenu.module.css";
 import HorizontalSlider from "./HorizontalSlider";
 import DrinkDescriptionModal from "./DrinkDescriptionModal";
 
-const tableName = "drink"; // Tabla 
+const tableName = "drink";
 
 const DrinkMenu = ({ onSelectItem }) => {
   const [drinks, setDrinks] = useState([]);

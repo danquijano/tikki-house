@@ -12,15 +12,15 @@ const HorizontalSlider = ({ children }) => {
     const scrollAmount = 300;
 
     if (direction === "left") {
-  if (current.scrollLeft === 0) {
-    current.scrollTo({ left: 0, behavior: "smooth" }); // Ir al inicio
-  } else {
-    current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  }
-} else {
+      if (current.scrollLeft === 0) {
+        current.scrollTo({ left: current.scrollWidth, behavior: "smooth" });
+      } else {
+        current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      }
+    } else {
       const maxScrollLeft = current.scrollWidth - current.clientWidth;
       if (current.scrollLeft >= maxScrollLeft - 1) {
-        current.scrollTo({ left: current.scrollWidth, behavior: "smooth" });
+        current.scrollTo({ left: 0, behavior: "smooth" });
       } else {
         current.scrollBy({ left: scrollAmount, behavior: "smooth" });
       }
