@@ -1,63 +1,42 @@
 import React, { useState } from "react";
 import { supabase } from '../data/supabaseClient';
 import styles from "../styles/LoginPage.module.css";
-import DrinkAdminPanel from "./DrinkAdminPanel.jsx";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
+  e.preventDefault();
+  setLoading(true);
+  setError(null);
 
-    try {
-      // Busca el usuario por email en la tabla "users"
-      const { data, error } = await supabase
-        .from('user')
-        .select('email, password')
-        .eq('email', email)
-        .single();
+  console.log("Intentando login con:", { email, password });
 
-      if (error) {
-        throw error;
-      }
+  try {
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
-      // Aquí comparas la contraseña ingresada con la almacenada (ojo, idealmente la contraseña debe estar hasheada)
-      if (data && data.password === password) {
-        setLoggedIn(true);
-      } else {
-        setError("Correo o contraseña incorrectos");
-      }
-    } catch (err) {
-      console.error("Error en login:", err.message);
-      setError("Error al validar usuario");
-    } finally {
-      setLoading(false);
+    if (error) {
+      console.log("Error en login:", error);
+      setError("Correo o contraseña incorrectos");
+    } else {
+      console.log("Login exitoso:", data);
+      navigate("/admin");
     }
-  };
-
-  const handleLogout = () => {
-    setLoggedIn(false);
-    setEmail("");
-    setPassword("");
-    setError(null);
-  };
-
-  if (loggedIn) {
-    return (
-      <>
-        <DrinkAdminPanel />
-        <button onClick={handleLogout} style={{ margin: "20px" }}>
-          Cerrar sesión
-        </button>
-      </>
-    );
+  } catch (err) {
+    console.error("Error en login:", err.message);
+    setError("Error al validar usuario");
+  } finally {
+    setLoading(false);
   }
+};
 
   return (
     <div className={styles.loginContainer}>
