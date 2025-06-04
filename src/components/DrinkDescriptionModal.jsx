@@ -8,7 +8,6 @@ const DrinkDescriptionModal = ({ drink, onClose }) => {
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeButton} onClick={onClose}>✕</button>
-        <img src={drink.image} alt={drink.name} className={styles.modalImage} />
         <h2>{drink.name}</h2>
         <p>{drink.description}</p>
       </div>
