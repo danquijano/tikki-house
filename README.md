@@ -1,6 +1,11 @@
-# TIKI House - Proyecto de la UCR
+# TIKI House - Proyecto UCR
 
 Este proyecto es una aplicación web desarrollada como parte de un trabajo académico en la Universidad de Costa Rica (UCR). La aplicación presenta la historia, valores y servicios de **TIKI House**, un bar itinerante que transforma eventos privados en experiencias memorables.
+
+@JNTHNCHR
+@Mich122004
+@jeanpplay
+@danquijano
 
 ---
 
