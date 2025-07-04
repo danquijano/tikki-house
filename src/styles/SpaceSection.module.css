@@ -1,0 +1,37 @@
+.spacesSection {
+    background-color: #267563a6; /* Verde oscuro (Pantone 626 C) */
+    padding: 4rem 0;
+    color: #F8F9FA; /* Texto claro */
+  }
+  
+  .sectionTitle {
+    color: #F5A800 !important; /* Dorado (Pantone 130 C) */
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'A2 Brown', sans-serif;
+  }
+  
+  .card {
+    border: none !important;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .spaceSection {
+  display: none;
+  }
+
+  
+  .cardBody {
+    background-color: #26d3aa !important; /* Verde claro (Pantone 339 C) */
+    color: #161616; /* Texto oscuro */
+  }
+  
+  .cardTitle {
+    font-weight: bold;
+    font-family: 'DIN Pro', sans-serif;
+  }

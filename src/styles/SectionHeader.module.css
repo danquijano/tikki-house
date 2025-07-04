@@ -1,0 +1,15 @@
+.section-header {
+    text-align: center;
+    margin: 40px 0 20px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 4rem;
+    color: #333;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+    color: #666;
+  }
+  

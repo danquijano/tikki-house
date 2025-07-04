@@ -1,0 +1,16 @@
+/* src/styles/Footer.module.css */
+.footer {
+    background-color: #1A1A1A;
+    color: white;
+    padding: 2rem 0;
+    width: 100%;
+  }
+  
+  .brand {
+    font-family: 'A2 Brown', sans-serif;
+    color: #F5A800;
+  }
+  
+  .copyright {
+    font-family: 'DIN Pro', sans-serif;
+  }

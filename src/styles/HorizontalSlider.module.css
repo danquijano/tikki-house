@@ -1,0 +1,86 @@
+/* src/styles/HorizontalSlider.module.css */
+
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 0 2.5rem; /* Más espacio para las flechas */
+  margin-bottom: 1rem;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 2rem; /* Aumenté el gap para mejor separación */
+  padding: 1.5rem 0; /* Más padding vertical */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: 100%;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider > * {
+  flex: 0 0 auto; /* ¡Importante! Evita que se compriman */
+  scroll-snap-align: start;
+  min-width: 300px; /* Ancho mínimo para las tarjetas */
+  scroll-margin: 0 1rem; /* Margen al hacer scroll-snap */
+}
+
+.arrowButton {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  color: #235B4E;
+}
+
+.arrowButton:hover {
+  background: white;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.arrowButton:first-child {
+  left: 0;
+}
+
+.arrowButton:last-child {
+  right: 0;
+}
+
+/* Clases para controlar visibilidad de flechas */
+.arrowHidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .sliderWrapper {
+    padding: 0 1.5rem;
+  }
+  
+  .arrowButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .slider > * {
+    min-width: 280px; /* Tarjetas más pequeñas en móviles */
+  }
+}

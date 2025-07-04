@@ -1,0 +1,524 @@
+/* Estilos unificados para ambos paneles de administración */
+.adminContainer {
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Estilos para los botones de acción */
+.adminButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 16px;
+}
+
+/* Botón de confirmar (check) */
+.adminButton:first-of-type {
+  color: #28a745; /* Verde */
+  border: 1px solid #28a745;
+  margin-right: 8px;
+}
+
+.adminButton:first-of-type:hover {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+/* Botón de eliminar (trash) */
+.adminButton:last-of-type {
+  color: #dc3545; /* Rojo */
+  border: 1px solid #dc3545;
+}
+
+.adminButton:last-of-type:hover {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Efecto hover para ambos botones */
+.adminButton:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo para el enlace PDF */
+.pdfLink {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.pdfLink:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Botón de ayuda */
+.helpButton {
+  background: none;
+  border: none;
+  color: #666;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Modal de instrucciones */
+.instructionsModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.fileInputContainer {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.fileInputLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border: 2px dashed #ced4da;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fileInputLabel:hover {
+  border-color: #235B4E;
+  background-color: #f0f7f5;
+}
+
+.fileInputLabel span {
+  color: #235B4E;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.fileInputLabel .icon {
+  font-size: 1.5rem;
+  color: #235B4E;
+}
+
+.fileInput {
+  position: absolute;
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
+.fileInputLabel.hasFile {
+  border-color: #28a745;
+  background-color: #e8f5e9;
+}
+
+.testimonialImagePreview {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.instructionsContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.instructionsContent h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.instructionsContent ul {
+  padding-left: 20px;
+}
+
+.closeButton {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.instructionsBox {
+  background-color: #f8f9fa;
+  border-left: 4px solid #0d6efd;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.instructionsBox h4 {
+  margin-top: 0;
+  font-size: 0.9rem;
+  color: #0d6efd;
+}
+
+.instructionsBox ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+  font-size: 0.85rem;
+}
+
+.instructionsBox li {
+  margin-bottom: 5px;
+}
+
+.adminContainer h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 700;
+  color: #235B4E;
+}
+
+.addButton {
+  background-color: #E0592A;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.addButton:hover {
+  background-color: #cc4d25;
+  transform: translateY(-2px);
+}
+
+/* Estilos para el modal/formulario */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modalContent h3 {
+  margin-top: 0;
+  color: #235B4E;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="file"],
+.form textarea,
+.form select {
+  padding: 12px 16px;
+  border: 1.8px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  color: #333;
+  width: 100%;
+}
+
+.form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  outline: none;
+  border-color: #235B4E;
+  box-shadow: 0 0 0 2px rgba(35, 91, 78, 0.2);
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.form label.checkboxLabel {
+  margin: 8px 0;
+}
+
+.form label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.modalButtons,
+.formActions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.modalButtons button,
+.formActions button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.modalButtons button[type="submit"],
+.formActions button[type="submit"] {
+  background-color: #235B4E;
+  color: #fff;
+}
+
+.modalButtons button[type="submit"]:hover:not(:disabled),
+.formActions button[type="submit"]:hover:not(:disabled) {
+  background-color: #1b463a;
+  transform: translateY(-2px);
+}
+
+.modalButtons button[type="submit"]:disabled,
+.formActions button[type="submit"]:disabled {
+  background-color: #6c7a7c;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.modalButtons button[type="button"],
+.formActions button[type="button"] {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.modalButtons button[type="button"]:hover,
+.formActions button[type="button"]:hover {
+  background-color: #d0d0d0;
+  transform: translateY(-2px);
+}
+
+/* Estilos para la tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 24px;
+}
+
+.table thead {
+  background-color: #235B4E;
+  color: #fff;
+  font-weight: 600;
+}
+
+.table th,
+.table td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.table th:first-child,
+.table td:first-child {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.table td.descriptionCell {
+  text-align: left;
+  max-width: 280px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.table img {
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.actionsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #555;
+  padding: 8px;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButton:hover {
+  transform: scale(1.1);
+}
+
+.iconButton.editBtn:hover {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.iconButton.deleteBtn:hover {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .adminContainer {
+    padding: 16px 20px;
+  }
+
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adminContainer {
+    padding: 16px;
+  }
+
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .modalContent {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 10px 12px;
+  }
+
+  /* Añade esto al final del archivo CSS */
+  .adminTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 24px;
+  }
+
+  .adminTable thead {
+    background-color: #235B4E;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .adminTable th,
+  .adminTable td {
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+  }
+
+  .adminTable th:first-child,
+  .adminTable td:first-child {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .adminTable td.descriptionCell {
+    text-align: left;
+    max-width: 280px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .actionCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+
+}

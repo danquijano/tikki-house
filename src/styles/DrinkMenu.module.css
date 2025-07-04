@@ -1,0 +1,174 @@
+/* src/styles/DrinkMenu.module.css */
+
+.drinkImage {
+  width: 100%;
+  height: 240px; /* +20px */
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.drinkCard {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 400px; /* +20px */
+  flex-shrink: 0;
+}
+
+.drinkTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #235B4E;
+  margin-bottom: 0.5rem;
+  text-align: center; /* Texto centrado */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Máximo 2 líneas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3.6rem; /* Altura mínima para 2 líneas */
+  line-height: 1.2;
+  padding: 0 0.5rem;
+}
+
+.drinkFooter {
+  display: flex;
+  justify-content: center; /* 🔥 Esto centra el contenido */
+  align-items: center;
+  margin-top: auto;
+  padding: 0; /* eliminamos padding lateral innecesario */
+}
+
+/* Resto de tus estilos permanecen igual */
+.eyeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.addButton {
+  background-color: #E0592A;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.drinkPrice {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #235B4E;
+}
+
+.addButton.selected {
+  background-color: #00B189;
+}
+
+.addButton.selected:hover {
+  background-color: #008c6a;
+}
+.warningMessage {
+  position: fixed;
+  top: 50%;          
+  left: 50%;          
+  transform: translate(-50%, -50%);
+  padding: 4rem 4rem;
+  border-radius: 12px;
+  background-color: rgba(255, 244, 229, 0.95);
+  color: #856404;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #ffeeba;
+  z-index: 1000;
+
+  /* Animación de entrada/salida */
+  opacity: 0;
+  animation: fadeInOut 3s ease;
+  pointer-events: none;
+  position: fixed;
+}
+
+.warningMessage::before {
+  content: ""; 
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  width: 100%; 
+  height: 100%; 
+  background-image: url('../assets/mask-tikki.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%; 
+  opacity: 0.1; /* 👈 AJUSTA AQUí para cambiar la transparencia de la imagen */
+  pointer-events: none;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -55%);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -45%);
+  }
+}
+
+
+.warningMessage::before {
+  font-size: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .drinkCard {
+    width: 260px;
+    height: 380px; /* +20px */
+  }
+  
+  .drinkImage {
+    height: 200px; /* +20px */
+  }
+}

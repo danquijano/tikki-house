@@ -1,0 +1,119 @@
+/* src/styles/DrinkPackages.module.css */
+
+/* Contenedor principal (ahora manejado por HorizontalSlider) */
+
+
+.packagesContainer {
+  width: 100%;
+}
+
+.packageCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 2px solid #e2e8f0;
+  width: 320px; /* Ancho fijo para el slider */
+  margin: 0 0.5rem; /* Margen entre tarjetas */
+  flex-shrink: 0; /* Evita que se encojan */
+}
+
+.packageCard:hover {
+  transform: translateY(-5px);
+  border-color: #00B189;
+  box-shadow: 0 12px 24px rgba(0, 177, 137, 0.2); 
+}
+
+.packageTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #235B4E;
+  margin-bottom: 0.5rem;
+}
+
+.packageDescription {
+  color: #555;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.packageIncludes {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+
+.packageIncludes li {
+  margin-bottom: 0.5rem;
+  color: #333;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.packageIncludes li::before {
+  content: "✓";
+  color: #00B189;
+  position: absolute;
+  left: -1.25rem;
+  font-weight: bold;
+}
+
+.packageFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 0.75rem;
+}
+
+.packagePrice {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #235B4E;
+}
+
+.packageDiscount {
+  font-size: 0.85rem;
+  color: #777;
+  margin-left: 0.5rem;
+}
+
+.selectButton {
+  background-color: #E0592A;
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.selectButton:hover {
+  background-color: #008c6a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(224, 89, 42, 0.3);
+}
+
+.selectButton.selected {
+  background-color: #00B189;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .packageCard {
+    width: 280px;
+    padding: 1.25rem;
+  }
+  
+  .packageTitle {
+    font-size: 1.3rem;
+  }
+  
+  .selectButton {
+    padding: 0.6rem 1.5rem;
+  }
+}

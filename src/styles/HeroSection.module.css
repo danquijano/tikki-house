@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+.heroSection {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Sigmar One';
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(35, 91, 78, 0.7) !important;
+  /* Verde oscuro (Pantone 626 C) con transparencia */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  color: #F8F9FA;
+  /* Texto claro */
+
+}
+
+.title {
+  color: rgb(245, 168, 0) !important;
+  /* Dorado (Pantone 130 C) */
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+.btnPrimary {
+  background-color: #E0592A !important;
+  /* Naranja (Pantone 7579 C) */
+  border: none;
+  font-weight: bold;
+  padding: 10px 25px;
+}

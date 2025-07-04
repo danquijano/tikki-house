@@ -1,0 +1,72 @@
+/* src/styles/AlertModal.module.css */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.modal {
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  text-align: center;
+}
+
+.modal p {
+  font-size: 1.1rem;
+  margin: 0 0 24px 0;
+  color: #235B4E;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.buttons button {
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+/* Botón de Confirmar */
+.buttons button:first-child {
+  background-color: #235B4E;
+  color: white;
+}
+
+.buttons button:first-child:hover {
+  background-color: #1b463a;
+  transform: translateY(-2px);
+}
+
+/* Botón de Cancelar / Cerrar */
+.buttons button:last-child {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.buttons button:last-child:hover {
+  background-color: #d0d0d0;
+  transform: translateY(-2px);
+}

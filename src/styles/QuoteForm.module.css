@@ -1,0 +1,45 @@
+/* src/styles/QuoteForm.module.css */
+.quoteForm {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  .quoteForm label {
+    font-weight: 600;
+    color: #235B4E;
+  }
+  
+  .quoteForm input,
+  .quoteForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .quoteForm input:focus,
+  .quoteForm textarea:focus {
+    border-color: #00B189;
+  }
+  
+  .quoteForm button {
+    background-color: #235B4E;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .quoteForm button:hover {
+    background-color: #00B189;
+  }
+  

@@ -1,0 +1,58 @@
+/* styles/LoginPage.module.css */
+
+.loginContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0f7ec, #fffde7); /* Verde-amarillo suave */
+  font-family: 'A2 Brown', sans-serif;
+}
+
+.loginBox {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.loginTitle {
+  font-size: 1.8rem;
+  color: #235B4E;
+  margin-bottom: 1.5rem;
+}
+
+.inputField {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #b0c4b1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.loginButton {
+  width: 100%;
+  background-color: #F5A800;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+  background-color: #e09e00;
+}
+
+.loginFooter {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}

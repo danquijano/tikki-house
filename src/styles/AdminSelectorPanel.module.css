@@ -1,0 +1,55 @@
+.pageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.selectorContainer {
+  padding: 3rem 2rem;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #143959;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.adminButton {
+  background-color: #235B4E;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(20, 57, 89, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.adminButton:hover {
+  background-color: #E0592A;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 57, 89, 0.4);
+}

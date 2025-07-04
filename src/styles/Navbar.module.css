@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+
+.navbar {
+    background-color: #1A1A1A !important; /* Fondo oscuro del libro de marca */
+     font-family: 'Sigmar One';
+    letter-spacing: 1.2px;
+  }
+  
+  .brand {
+    color: #F5A800 !important; /* Dorado (Pantone 130 C) */
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .navLink {
+    color: #F8F9FA !important; /* Texto claro */
+    margin: 0 10px;
+  }
+  
+  .navLinkContact {
+    color: #F5A800 !important; /* Dorado para el botón de contacto */
+    font-weight: bold;
+  }
+
+  .navLink.active {
+    border-bottom: 2px solid #F5A800; /* Subrayado dorado */
+    padding-bottom: 3px;
+  }
+
+  .logoImage {
+    height: 45px; /* Ajusta esta altura según necesites */
+    width: auto; /* Mantiene la proporción */
+    transition: all 0.3s ease;
+  }
+  
+  /* Opcional: Efecto hover para el logo */
+  .logoImage:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+  
+  /* Ajusta el navbar-brand para mejor espaciado */
+  .navbar-brand {
+    padding: 5px 0; /* Ajusta el padding vertical */
+  }
